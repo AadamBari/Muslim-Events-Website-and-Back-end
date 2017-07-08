@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muslim Events</title>
+</head>
+<body>
+
+<h1>Success! Aadam Bari is the smartest man alive!</h1>
+<h2>List of Events</h2>
+
+{% if all_events %}
+
+    {%  for event in all_events %}
+        {{ event.name }}<br>
+    {% endfor %}
+
+{% else %}
+
+ <h3>No events available</h3>
+
+{% endif %}
+
+<h2>List of Organisations</h2>
+{%  for org in all_orgs %}
+    {{ org.name }} - {{ org.description }}<br>
+{% endfor %}
+
+</body>
+</html>
