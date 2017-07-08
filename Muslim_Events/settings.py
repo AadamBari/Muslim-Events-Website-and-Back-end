@@ -25,7 +25,7 @@ SECRET_KEY = 'd!fak7cx7^sgl6mwx8py+4dwn#z$erlja-qd_frmnindj+se4^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".muslimevents.ie", "localhost"]
 
 
 # Application definition
