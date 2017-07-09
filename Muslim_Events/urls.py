@@ -22,7 +22,7 @@ urlpatterns = [
     url(r'^muslimadmin/', admin.site.urls),
     url(r'^organisations/', views.OrganisationList.as_view()),
     url(r'^events/', views.EventList.as_view()),
-    url(r'^home/', include('home.urls')),
+    url(r'', include('home.urls', namespace='home')),
 
 ]
 
