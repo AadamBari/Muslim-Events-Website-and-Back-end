@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from django.shortcuts import get_object_or_404
-from rest_framework.views import  APIView
+from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Organisation, Event
@@ -10,6 +10,7 @@ from .serializers import OrganisationSerializer, EventSerializer
 # Create your views here.
 
 # Views takes request and returns hhtp response
+
 
 def index(request):
 
@@ -24,6 +25,8 @@ def index(request):
     return render(request, 'home/index.html', context)
 
 # List all Organisations
+
+
 class OrganisationList(APIView):
 
     def get(self, request):
@@ -45,6 +48,3 @@ class EventList(APIView):
 
     def post(self):
         pass
-
-
-
