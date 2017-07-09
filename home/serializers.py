@@ -10,3 +10,10 @@ class OrganisationSerializer(serializers.ModelSerializer):
         model = Organisation
         # fields = ('name', 'description') # The model attributes you want to return
         fields = '__all__'
+
+
+class EventSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Event
+        fields = '__all__'

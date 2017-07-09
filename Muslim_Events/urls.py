@@ -21,7 +21,8 @@ from home import views
 urlpatterns = [
     url(r'^muslimadmin/', admin.site.urls),
     url(r'^home/', include('home.urls')),
-    url(r'^organisations/', views.OrganisationList.as_view())
+    url(r'^organisations/', views.OrganisationList.as_view()),
+    url(r'^events/', views.EventList.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
