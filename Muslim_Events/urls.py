@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from rest_framework.urlpatterns import format_suffix_patterns
+from home import views
 
 urlpatterns = [
     url(r'^muslimadmin/', admin.site.urls),
     url(r'^home/', include('home.urls')),
+    url(r'^organisations/', views.OrganisationList.as_view())
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
