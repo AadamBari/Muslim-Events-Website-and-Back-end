@@ -1,0 +1,11 @@
+body{
+    background: white url("greyone.jpg");
+}
+
+.navbar{
+    border-radius: 0;
+}
+
+.navbar-brand{
+    font-family: 'Cinzel', cursive;
+}
