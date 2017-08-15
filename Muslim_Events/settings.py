@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [".muslimevents.ie", "localhost"]
 # Application definition
 
 INSTALLED_APPS = [
+    'geoposition',
     'home.apps.HomeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -122,3 +123,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+
+GEOPOSITION_GOOGLE_MAPS_API_KEY = 'AIzaSyDDo6H2qG2DKm7XYKmaNUeulC0PFDTMyFY'
+
+GEOPOSITION_MARKER_OPTIONS = {
+         'cursor': 'move'
+     }

@@ -1,4 +1,5 @@
 from django.db import models
+from geoposition.fields import GeopositionField
 
 # Create your models here.
 
@@ -14,7 +15,7 @@ class Event(models.Model):
     organisation = models.ForeignKey(Organisation, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=5000)
-    image = models.CharField(max_length=5000)
+    image = models.FileField()
 
     def __str__(self):
         return self.name + ' - by ' + self.organisation.name
@@ -25,4 +26,10 @@ class Event(models.Model):
 # python manage.py migrate
 
 # Database API Shell
-#
+
+class Location(models.Model):
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    address = models.CharField(max_length=255)
+    city = models.CharField(max_length=50)
+    position = GeopositionField(blank=True)
+
