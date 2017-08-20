@@ -31,5 +31,8 @@ class Location(models.Model):
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
     address = models.CharField(max_length=255)
     city = models.CharField(max_length=50)
-    position = GeopositionField(blank=True)
+    position = GeopositionField()
+
+    def __str__(self):
+        return self.event.name + ' at ' + self.address + '(' + self.city + ')'
 
