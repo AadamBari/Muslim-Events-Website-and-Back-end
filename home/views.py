@@ -24,6 +24,9 @@ def index(request):
     }
     return render(request, 'home/index.html', context)
 
+def detail(request, event_id):
+
+    return render(request, 'home/detail.html')
 
 
 # List all Organisations
