@@ -1,2 +1,29 @@
 {% extends 'home/base.html' %}
-Hellow
+
+{% block body %}
+
+    <div class="container text-center">
+
+          <h1>{{ event.name }}</h1>
+
+        <p>Information about the event below</p>
+
+          <div class="row">
+
+              <div class="col-sm-6 text-left">
+                  {{ event.description }}<br>
+                  <h2>Description</h2>
+                  <p>This event is brought to you by {{ event.organisation.name }}</p>
+                  Date:<br>
+                  Location:
+              </div>
+
+              <div class="col-sm-4">
+                  <img src={{ event.image.url }} class="img-thumbnail" alt="{{ event.name }}">
+              </div>
+
+          </div>
+
+    </div>
+
+{% endblock %}

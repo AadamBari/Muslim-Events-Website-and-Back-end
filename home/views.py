@@ -26,7 +26,13 @@ def index(request):
 
 def detail(request, event_id):
 
-    return render(request, 'home/detail.html')
+    event = Event.objects.get(id__exact=event_id)
+
+    context = {
+        'event': event,
+    }
+
+    return render(request, 'home/detail.html', context)
 
 
 # List all Organisations
