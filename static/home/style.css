@@ -1,20 +1,4 @@
-body{
+/*body{*/
     /*background: white url("greyone.jpg");*/
-}
-
-.navbar{
-    border-radius: 0;
-}
-
-.navbar-brand{
-    font-family: 'Cinzel', cursive;
-}
-
-.navbar-inverse{
-    /*background-color: #a31513;*/
-}
-
-.nav.navbar-nav li a {
-   /*color: #FB1A14;*/
- }
+/*}*/
 
