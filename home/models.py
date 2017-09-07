@@ -1,5 +1,6 @@
 from django.db import models
 from geoposition.fields import GeopositionField
+from django.utils import timezone
 
 # Create your models here.
 
@@ -16,6 +17,8 @@ class Event(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=5000)
     image = models.FileField()
+    start = models.DateTimeField(default=timezone.now)
+    end = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.name + ' - by ' + self.organisation.name
