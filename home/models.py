@@ -7,6 +7,10 @@ from django.utils import timezone
 class Organisation(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=1000)
+    facebook = models.URLField(max_length=200, blank=True)
+    twitter = models.URLField(max_length=200, blank=True)
+    instagram = models.URLField(max_length=200, blank=True)
+    email = models.EmailField(max_length=200, blank=True)
 
     def __str__(self):
         return self.name + ' - ' + self.description
