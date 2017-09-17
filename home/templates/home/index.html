@@ -9,13 +9,24 @@
         <h2>List of Events</h2>
 
             {% if all_events %}
-                <div class="list-group">
+                <div class="media">
 
                     {%  for event in all_events %}
-                        <a href="/{{ event.id }}" class="list-group-item">
-                            <h4 class="list-group-item-heading">{{ event.name }}</h4>
-                            <p class="list-group-item-text">{{ event.description }}</p>
-                        </a>
+
+                        <div class="media-left">
+                            <a href="/{{ event.id }}">
+                            <img src="{{ event.image.url }}" class="media-object" style="width:60px">
+                            </a>
+                        </div>
+
+                        <div class="media-body">
+                            <h4 class="media-heading">{{ event.name }}</h4>
+                            <p>{{ event.description }}</p>
+                            <p>{{ event.start }}</p>
+                        </div>
+
+                        <hr>
+
                     {% endfor %}
 
                 </div>
