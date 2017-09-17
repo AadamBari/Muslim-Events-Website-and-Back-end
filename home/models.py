@@ -11,6 +11,7 @@ class Organisation(models.Model):
     twitter = models.URLField(max_length=200, blank=True)
     instagram = models.URLField(max_length=200, blank=True)
     email = models.EmailField(max_length=200, blank=True)
+    website = models.URLField(max_length=200, blank=True)
 
     def __str__(self):
         return self.name + ' - ' + self.description
