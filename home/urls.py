@@ -8,5 +8,8 @@ urlpatterns = [
     # /712/
     url(r'^(?P<event_id>[0-9]+)/$', views.detail, name='detail'),
 
+    # /organisations
+    url(r'^orgs$', views.organisations, name='organisations'),
+
 
 ]

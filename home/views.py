@@ -24,6 +24,18 @@ def index(request):
     }
     return render(request, 'home/index.html', context)
 
+def organisations(request):
+
+    all_orgs = Organisation.objects.all()
+    all_events = Event.objects.all()
+
+    context = {
+        'all_orgs': all_orgs,
+        'all_events': all_events,
+
+    }
+    return render(request, 'home/organisations.html', context)
+
 def detail(request, event_id):
 
     event = Event.objects.get(id__exact=event_id)

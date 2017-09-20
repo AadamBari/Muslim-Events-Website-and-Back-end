@@ -1,0 +1,34 @@
+{% extends 'home/base.html' %}
+
+{% block body %}
+
+<div class="container">
+
+        <h2>List of Organisations</h2>
+
+            {% if all_events %}
+                <div class="media">
+
+                    {%  for organisation in all_orgs %}
+
+                        <div class="media-body">
+                            <h4 class="media-heading">{{ organisation.name }}</h4>
+                            <p>{{ organisation.description }}</p>
+                        </div>
+
+                        <hr>
+
+                    {% endfor %}
+
+                </div>
+
+            {% else %}
+
+         <h3>No organisations available</h3>
+
+        {% endif %}
+
+
+    </div>
+
+{% endblock %}
