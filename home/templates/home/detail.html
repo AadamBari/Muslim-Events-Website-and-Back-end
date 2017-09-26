@@ -6,16 +6,15 @@
 
           <h1>{{ event.name }}</h1>
 
-        <p>Information about the event below</p>
+        <p><strong>{{ event.organisation.name }}</strong></p>
 
           <div class="row">
 
               <div class="col-sm-6 text-left">
-                  {{ event.description }}<br>
                   <h2>Description</h2>
-                  <p>This event is brought to you by {{ event.organisation.name }}</p>
-                  Date: {{ event.start }}<br>
-                  Location:
+                  <p>{{ event.description }}</p>
+                  <span class="glyphicon glyphicon-calendar" aria-hidden="true" ></span>  {{ event.start }}<br>
+                  <span class="glyphicon glyphicon-map-marker" aria-hidden="true" ></span> {{ location.address }}<br>
               </div>
 
               <div class="col-sm-4">

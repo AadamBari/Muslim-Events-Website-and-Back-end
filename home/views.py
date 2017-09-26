@@ -39,9 +39,11 @@ def organisations(request):
 def detail(request, event_id):
 
     event = Event.objects.get(id__exact=event_id)
+    location = Location.objects.get(event=event_id)
 
     context = {
         'event': event,
+        'location': location,
     }
 
     return render(request, 'home/detail.html', context)
