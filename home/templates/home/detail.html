@@ -2,23 +2,22 @@
 
 {% block body %}
 
-    <div class="container text-center">
+    <h1>{{ event.name }}</h1>
 
-          <h1>{{ event.name }}</h1>
-
-        <p><strong>{{ event.organisation.name }}</strong></p>
+        <p>By <strong>{{ event.organisation.name }}</strong></p>
 
           <div class="row">
 
               <div class="col-sm-6 text-left">
-                  <h2>Description</h2>
-                  <p>{{ event.description }}</p>
+
                   <span class="glyphicon glyphicon-calendar" aria-hidden="true" ></span>  {{ event.start }}<br>
 
                   {% if location is not None %}
                       <span class="glyphicon glyphicon-map-marker" aria-hidden="true" ></span> {{ location.address }}<br>
                   {% endif %}
 
+                  <hr>
+                  <p>{{ event.description }}</p>
 
               </div>
 
@@ -27,7 +26,5 @@
               </div>
 
           </div>
-
-    </div>
 
 {% endblock %}
