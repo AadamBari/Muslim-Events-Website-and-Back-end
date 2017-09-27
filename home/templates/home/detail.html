@@ -14,7 +14,12 @@
                   <h2>Description</h2>
                   <p>{{ event.description }}</p>
                   <span class="glyphicon glyphicon-calendar" aria-hidden="true" ></span>  {{ event.start }}<br>
-                  <span class="glyphicon glyphicon-map-marker" aria-hidden="true" ></span> {{ location.address }}<br>
+
+                  {% if location is not None %}
+                      <span class="glyphicon glyphicon-map-marker" aria-hidden="true" ></span> {{ location.address }}<br>
+                  {% endif %}
+
+
               </div>
 
               <div class="col-sm-4">

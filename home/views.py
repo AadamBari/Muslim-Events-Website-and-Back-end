@@ -6,6 +6,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Organisation, Event, Location
 from .serializers import OrganisationSerializer, EventSerializer, LocationSerializer
+from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 
@@ -39,7 +40,11 @@ def organisations(request):
 def detail(request, event_id):
 
     event = Event.objects.get(id__exact=event_id)
-    location = Location.objects.get(event=event_id)
+
+    try:
+        location = Location.objects.get(event=event_id)
+    except ObjectDoesNotExist:
+        location = None
 
     context = {
         'event': event,
