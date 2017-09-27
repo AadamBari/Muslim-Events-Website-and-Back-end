@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cfb98ea-7424-4377-9170-b35fe2ecd1f6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/templates/home/detail.html" afterPath="$PROJECT_DIR$/home/templates/home/detail.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,8 +72,8 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home/templates/home/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="425">
+              <caret line="25" column="98" lean-forward="false" selection-start-line="25" selection-start-column="98" selection-end-line="25" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -1106,8 +1105,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home/templates/home/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="425">
+          <caret line="25" column="98" lean-forward="false" selection-start-line="25" selection-start-column="98" selection-end-line="25" selection-end-column="98" />
           <folding />
         </state>
       </provider>
