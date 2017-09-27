@@ -18,63 +18,63 @@
 <body>
 
     <nav class="navbar navbar-default">
-    <div class="container-fluid">
+        <div class="container-fluid">
 
-        <!-- Header -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{%  url 'home:index' %}">Muslim Events</a>
-        </div>
+            <!-- Header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{%  url 'home:index' %}">Muslim Events</a>
+            </div>
 
-        <!-- Items -->
-        <div class="collapse navbar-collapse" id="topNavBar">
+            <!-- Items -->
+            <div class="collapse navbar-collapse" id="topNavBar">
 
-            <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav">
 
-                <li class="">
-                    <a href="{% url 'home:index' %}">
-                        <span class="glyphicon glyphicon-calendar" aria-hidden="true" ></span>
-                        Events
-                    </a>
-                </li>
-                <li class="">
-                    <a href="{% url 'home:organisations' %}">
-                        <span class="glyphicon glyphicon-tower"></span>
-                        Organisations
-                    </a>
-                </li>
+                    <li class="">
+                        <a href="{% url 'home:index' %}">
+                            Events
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{% url 'home:organisations' %}">
+                            Organisations
+                        </a>
+                    </li>
 
-            </ul>
+                </ul>
 
-            <form class="navbar-form navbar-left" role="search" method="get" action="#">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="q" value="">
-                </div>
-                <button type="submit" class="btn btn-default">Search</button>
-            </form>
+                <ul class="nav navbar-nav navbar-right">
 
-            <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        <a href="{% url 'home:index' %}">
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true" ></span>
+                            About Us
+                        </a>
+                    </li>
 
-                <li class="">
-                    <a href="{% url 'home:index' %}">
-                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true" ></span>
-                        About Us
-                    </a>
-                </li>
+                </ul>
 
-            </ul>
+            </div>
 
         </div>
+    </nav>
 
-    </div>
-</nav>
+    <div class="container">
+
+        <a href="https://play.google.com/store/apps/details?id=com.muslimevents&hl">
+            <h1>Download our app now from the Google Playstore!</h1>
+        </a>
+
 
     {%  block body %}
     {% endblock %}
+
+    </div>
 
 </body>
 </html>

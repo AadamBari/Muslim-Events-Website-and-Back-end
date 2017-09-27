@@ -2,43 +2,34 @@
 
 {% block body %}
 
-    <div class="container">
+    <h2>List of Events</h2>
 
-    <h1>Download our app now from the Google Playstore!</h1>
+        {% if all_events %}
+            <div class="media">
 
-        <h2>List of Events</h2>
+                {%  for event in all_events %}
 
-            {% if all_events %}
-                <div class="media">
+                    <div class="media-left">
+                        <a href="/{{ event.id }}">
+                        <img src="{{ event.image.url }}" class="media-object" style="width:60px">
+                        </a>
+                    </div>
 
-                    {%  for event in all_events %}
+                    <div class="media-body">
+                        <h4 class="media-heading">{{ event.name }}</h4>
+                        <p>{{ event.description }}</p>
+                        <p>{{ event.start }}</p>
+                    </div>
 
-                        <div class="media-left">
-                            <a href="/{{ event.id }}">
-                            <img src="{{ event.image.url }}" class="media-object" style="width:60px">
-                            </a>
-                        </div>
+                    <hr>
 
-                        <div class="media-body">
-                            <h4 class="media-heading">{{ event.name }}</h4>
-                            <p>{{ event.description }}</p>
-                            <p>{{ event.start }}</p>
-                        </div>
+                {% endfor %}
 
-                        <hr>
+            </div>
 
-                    {% endfor %}
-
-                </div>
-
-            {% else %}
-
-         <h3>No events available</h3>
-
+        {% else %}
+            <h3>No events available</h3>
         {% endif %}
-
-
-    </div>
 
 {% endblock %}
 
