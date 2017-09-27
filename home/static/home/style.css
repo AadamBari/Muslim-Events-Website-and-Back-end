@@ -2,3 +2,12 @@
     /*background: white url("greyone.jpg");*/
 /*}*/
 
+a:link {
+    color: #a90000
+}
+
+
+/* mouse over link */
+a:hover {
+    color: #ca0000;
+}
