@@ -37,6 +37,10 @@ def organisations(request):
     }
     return render(request, 'home/organisations.html', context)
 
+def about(request):
+
+    return render(request, 'home/aboutus.html')
+
 def detail(request, event_id):
 
     event = Event.objects.get(id__exact=event_id)

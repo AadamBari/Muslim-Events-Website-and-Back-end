@@ -11,5 +11,8 @@ urlpatterns = [
     # /organisations
     url(r'^orgs$', views.organisations, name='organisations'),
 
+    # /about
+    url(r'^about$', views.about, name='about'),
+
 
 ]
