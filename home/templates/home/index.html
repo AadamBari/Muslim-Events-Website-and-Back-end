@@ -21,7 +21,8 @@
                         </a>
 
                         <p>{{ event.description }}</p>
-                        <p>{{ event.start }}</p>
+                        <span class="glyphicon glyphicon-calendar" aria-hidden="true" ></span> {{ event.start |date:"jS M Y" }}
+                        <span class="glyphicon glyphicon-time" aria-hidden="true" ></span> {{ event.start |date:"H:i" }}
                     </div>
 
                     <hr>
