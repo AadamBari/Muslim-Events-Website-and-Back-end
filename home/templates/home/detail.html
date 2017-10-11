@@ -10,7 +10,8 @@
 
               <div class="col-sm-6 text-left">
 
-                  <span class="glyphicon glyphicon-calendar" aria-hidden="true" ></span>  {{ event.start }}<br>
+                  <span class="glyphicon glyphicon-calendar" aria-hidden="true" ></span> {{ event.start |date:"jS M Y" }}
+                  <span class="glyphicon glyphicon-time" aria-hidden="true" ></span> {{ event.start |date:"H:i" }}<br>
 
                   {% if location is not None %}
                       <span class="glyphicon glyphicon-map-marker" aria-hidden="true" ></span> {{ location.address }}<br>
