@@ -16,7 +16,10 @@
                     </div>
 
                     <div class="media-body">
-                        <h4 class="media-heading">{{ event.name }}</h4>
+                        <a href="/{{ event.id }}">
+                            <h4 class="media-heading">{{ event.name }}</h4>
+                        </a>
+
                         <p>{{ event.description }}</p>
                         <p>{{ event.start }}</p>
                     </div>
