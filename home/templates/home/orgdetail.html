@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+
+{% block body %}
+
+    <h1>{{ org.name }}</h1>
+    <h4>{{ org.description }}</h4>
+
+    <span class="glyphicon glyphicon-globe" aria-hidden="true" ></span> {{ org.website }}<br>
+    <span class="glyphicon glyphicon-envelope" aria-hidden="true" ></span> {{ org.email }}
+
+    <hr>
+    <p>
+        <a href="{{ org.facebook }}">
+            <i class="fa fa-facebook-official" style="font-size:36px;"></i>
+        </a>
+
+        <a href="{{ org.facebook }}">
+            <i class="fa fa-twitter" style="font-size:36px;"></i>
+        </a>
+
+        <a href="{{ org.instagram }}">
+            <i class="fa fa-instagram" style="font-size:36px;"></i>
+        </a>
+    </p>
+
+
+
+{% endblock %}

@@ -8,8 +8,11 @@ urlpatterns = [
     # /712/
     url(r'^(?P<event_id>[0-9]+)/$', views.detail, name='detail'),
 
-    # /organisations
+    # /orgs
     url(r'^orgs$', views.organisations, name='organisations'),
+
+    # /orgs/22
+    url(r'^orgs/(?P<org_id>[0-9]+)/$', views.orgdetail, name='orgdetail'),
 
     # /about
     url(r'^about$', views.about, name='about'),

@@ -57,6 +57,16 @@ def detail(request, event_id):
 
     return render(request, 'home/detail.html', context)
 
+def orgdetail(request, org_id):
+
+    org = Organisation.objects.get(id__exact=org_id)
+
+    context = {
+        'org': org,
+    }
+
+    return render(request, 'home/orgdetail.html', context)
+
 
 # List all Organisations
 class OrganisationList(APIView):
