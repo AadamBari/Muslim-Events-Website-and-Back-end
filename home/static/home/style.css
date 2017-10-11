@@ -12,7 +12,7 @@ a:hover {
     color: #ca0000;
 }
 
-img:hover {
+.media-object:hover {
    padding:1px;
    border:1px solid #ca0000;
 }
