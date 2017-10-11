@@ -17,6 +17,11 @@ a:hover {
    border:1px solid #ca0000;
 }
 
+#poster:hover {
+   padding:1px;
+   border:1px solid #ca0000;
+}
+
 
 /*Social media links*/
 fa {
