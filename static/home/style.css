@@ -3,7 +3,7 @@
 /*}*/
 
 a:link {
-    color: #a90000
+    color: #a90000;
 }
 
 
@@ -15,4 +15,16 @@ a:hover {
 img:hover {
    padding:1px;
    border:1px solid #ca0000;
+}
+
+
+/*Social media links*/
+fa {
+    color: #a90000;
+}
+
+
+/* mouse over link */
+fa:hover {
+    color: #ca0000;
 }
